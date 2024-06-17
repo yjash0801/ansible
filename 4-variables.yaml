@@ -18,4 +18,4 @@
   tasks:
   - name: Variables list play-2
     ansible.builtin.debug:
-      msg: "Hello there, I work as in {{Var1}} as {{Var2}} {{Var3}}"
+      msg: "Hello there, I work in {{Var1}} as {{Var2}} {{Var3}}"
