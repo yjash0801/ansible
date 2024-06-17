@@ -1,12 +1,25 @@
-- name: Task level variable
+- name: Task-1 level variable
   hosts: localhost
   vars:
     Lang2: "Shell_Script"
   tasks:
-  - name: Variables in task level
+  - name: list variables in task-1 level
     vars:
       Lang1: "Python"
       Lang2: "Go"
       Lang3: "Java"
     ansible.builtin.debug:
       msg: "I am using these languages for scripting: {{Lang1}}, {{Lang2}}, and {{Lang3}}."
+
+- name: Task-2 level variables
+  hosts: localhost
+  vars:
+    Lang1: "MySQL"
+    Lang2: "MongoDb"
+    Lang3: "Microsoft SQL Server"
+  tasks:
+  - name: list variables in task-2 level
+    vars:
+      Lang3: "PostgreSQL"
+    ansible.builtin.debug:
+      msg: "I am using these Databases: {{Lang1}}, {{Lang2}}, and {{Lang3}}."
