@@ -1,0 +1,12 @@
+- name: Task level variable
+  hosts: localhost
+  vars:
+    Lang2: "Golang"
+  tasks:
+  - name: Variables in task level
+    vars:
+      Lang1: "Python"
+      Lang2: "Shell-Script"
+      Lang3: "Java"
+    ansible.builtin.debug:
+      msg: "I am using these languages for scripting: {{Lang1}}, {{Lang2}}, and {{Lang3}}."
