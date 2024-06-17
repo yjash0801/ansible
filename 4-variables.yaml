@@ -1,4 +1,4 @@
-- name: Variable in Play
+- name: Variable in Play-1
   hosts: localhost
   vars:
     Fname: "Jashwanth"
@@ -8,3 +8,14 @@
   - name: check variables
     ansible.builtin.debug:
       msg: "Hello there, My name is {{ Fname }} {{ Lname }} and I am learning {{ Course }}"
+
+- name: Variable in Play-2
+  hosts: localhost
+  vars:
+    Var1: Barclays
+    Var2: DevOps
+    Var3: Engineer
+  tasks:
+  - name: Variables list play-2
+    ansible.builtin.debug:
+      msg: "Hello there, I work as in {{Var1}} as {{Var2}} {{Var3}}"
