@@ -1,10 +1,10 @@
-- name: Play-1
+- name: Variables in ansible
   hosts: localhost
   vars:
-    Fname: Jashwanth
-    Lname: Yarrarapu
-    Course: DevOps
+    Fname: "Jashwanth"
+    Lname: "Yarrarapu"
+    Course: "DevOps"
   tasks:
-  - name: Play-1 and task-1
+  - name: Display variables in ansible
     ansible.builtin.debug:
-      msg: "Hello there, My name is {{Fname}} {{Lname}} learing {{Couser}}"
+      msg: "Hello There, my name is {{Fname} {{Lname}} and I am learning {{Course}}"
