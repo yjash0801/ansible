@@ -8,3 +8,6 @@
   - name: print variable value
     ansible.builtin.debug:
       msg: "User: {{user}}"
+  - name: print exit status rc
+    ansible.builtin.debug:
+      msg: "EXIT: {{user.rc}}"
