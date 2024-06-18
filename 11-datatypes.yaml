@@ -1,0 +1,31 @@
+- name: datatypes in ansible
+  hosts: localhost
+  vars:
+    Name: "Jashwanth Yarrarapu"
+    Skills:
+    - DevOps
+    - AWS
+    - Shell
+    - Kubernetes
+    - Docker
+    - Terraform
+    - Prometheus
+    - CloudWatch
+    Experience:
+      Barclays: 2
+      Kohls: 1
+      Wipro: 2
+    DevOps: true
+  tasks:
+  - name: All datatypes
+    ansible.builtin.debug:
+      msg: "My Name: {{Name}}"
+  - name: All datatypes
+    ansible.builtin.debug:
+      msg: "My Skills are: {{Skills}}"
+  - name: All datatypes
+    ansible.builtin.debug:
+      msg: "My experience: {{Experience}}"
+  - name: All datatypes
+    ansible.builtin.debug:
+      msg: "I am a DevOps Engineer: {{DevOps}}"
