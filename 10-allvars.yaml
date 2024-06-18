@@ -18,9 +18,9 @@
     Company3: "Wipro HYD playlevel"
   tasks:
   - name: getting 1) vars from playlevel 2) vars tasklevel 3) vars from file 4) vars from inventory 5) vars from prompt 6) vars from args
-    vars:
-      Company1: "Barclays NYC tasklevel"
-      Company2: "Kohl's WI tasklevel"
-      Company3: "Wipro HYD tasklevel"
+    # vars:
+    #   Company1: "Barclays NYC tasklevel"
+    #   Company2: "Kohl's WI tasklevel"
+    #   Company3: "Wipro HYD tasklevel"
     ansible.builtin.debug:
       msg: "I worked as DevOps Engineer at {{Company1}}, {{Company2}}, {{Company3}}"
