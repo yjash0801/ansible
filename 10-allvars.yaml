@@ -1,7 +1,7 @@
 - name: All kind of vars
   hosts: localhost
   vars_files:
-    - varsiable.yaml
+  - varsiable.yaml
   vars_prompt:
   - name: Company1
     prompt: please enter company1
@@ -22,6 +22,5 @@
       Company1: "Barclays NYC tasklevel"
       Company2: "Kohl's WI tasklevel"
       Company3: "Wipro HYD tasklevel"
-  - name: Get vars from all kinds of input vars
     ansible.builtin.debug:
       msg: "I worked as DevOps Engineer at {{Company1}}, {{Company2}}, {{Company3}}"
