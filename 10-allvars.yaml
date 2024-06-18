@@ -1,7 +1,7 @@
 - name: All kind of vars
   hosts: localhost
-  vars_files:
-  - variables.yaml
+  # vars_files:
+  # - variables.yaml
   vars_prompt:
   - name: Company1
     prompt: please enter company1
