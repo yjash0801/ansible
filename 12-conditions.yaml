@@ -11,3 +11,5 @@
   - name: print exit status rc
     ansible.builtin.debug:
       msg: "EXIT: {{user.rc}}"
+  - name: create user if do not exist
+    ansible.builtin.conditionals:
