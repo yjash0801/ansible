@@ -5,11 +5,16 @@
     ansible.builtin.command: id roboshop
     register: user
     ignore_errors: true
+
   - name: print variable value
     ansible.builtin.debug:
       msg: "User: {{user}}"
+
   - name: print exit status rc
     ansible.builtin.debug:
       msg: "EXIT: {{user.rc}}"
   - name: create user if do not exist
-    ansible.builtin.conditionals:
+  
+    ansible.builtin.user:
+      name: roboshop
+    when: user.rc != 0
