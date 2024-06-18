@@ -23,7 +23,7 @@
       msg: "My skills are: {{Skills}}"
 
 - name: all datatypes play 2
-  hosts: locathost
+  hosts: localhost
   vars:
     Experience:
       Overall: "5 years"
