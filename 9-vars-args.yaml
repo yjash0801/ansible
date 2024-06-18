@@ -1,0 +1,6 @@
+- name: varialbes from terminal PLAY
+  hosts: localhost
+  tasks:
+  - name: Take input from arguments passed
+    ansible.builtin.debug:
+      msg: "Hello {{Names}}, Good morning {{Wishes}}"
