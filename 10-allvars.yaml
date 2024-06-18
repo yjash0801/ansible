@@ -1,0 +1,26 @@
+- name: All kind of vars
+  hosts: localhost
+  vars_files:
+  - varsiable.yaml
+  vars_prompt:
+  - name: Company1
+    prompt: please enter company1
+    private: false
+  - name: Company2
+    prompt: please enter company2
+    private: false
+  - name: Company3
+    prompt: please enter company3
+    private: false
+  vars:
+    Company1: "Barclays NYC playlevel"
+    Company2: "Kohl's WI playlevel"
+    Company3: "Wipro HYD playlevel"
+  tasks: get vars from all kind of input vars
+    vars:
+      Company1: "Barclays NYC tasklevel"
+      Company2: "Kohl's WI tasklevel"
+      Company3: "Wipro HYD tasklevel"
+  - name: getting 1)vars from playlevel vars 2) tasklevel vars 3) vars from file, 4) vars from inventory, 5) vars from prompt 6) vars from args
+    ansible.builtin.debug:
+      msg: "I worked as DevOps Engineer at {{Company1}}, {{Company2}}, {{Company3}}"
